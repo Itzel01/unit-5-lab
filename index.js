@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-//let gameActive = true;
+
 let currentPlayer = "X";
 let playerMoves = [];
 let gameActive = true;
@@ -10,18 +10,18 @@ function clickedBlock(clicked){
     while(!(clickedBlock.style.backgroundColor)){
         if (currentPlayer === 'X'){
             clickedBlock.style.backgroundColor = "white";
-            playerMoves.push(clickedBlock)
-            console.log("X:", playerMoves)
-            currentPlayer = 'O'
+            playerMoves.push(clickedBlock);
+            console.log("X:", playerMoves);
+            currentPlayer = 'O';
         }
         else {
             clickedBlock.style.backgroundColor = "red";
-            playerMoves.push(clickedBlock)
-            console.log("O:", playerMoves)
-            currentPlayer = 'X'
+            playerMoves.push(clickedBlock);
+            console.log("O:", playerMoves);
+            currentPlayer = 'X';
         }
 
-   
+    } 
 }
 
 
@@ -29,32 +29,12 @@ function clickedBlock(clicked){
 let table = document.querySelectorAll("td");
 table.forEach(block => block.addEventListener('click', clickedBlock));
 
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if(gameActive == false){
+        currentPlayer = 'x';
+        playerMoves = [];
+        table.forEach(block => block.style.backgroundColor = '');
+    }
+}
 
 
 
