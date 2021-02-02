@@ -11,12 +11,11 @@ table{
     margin: auto;
     height: 300px; 
     width: 300px; 
-    background-color: cadetblue;
+    background-color: rgb(128, 0, 49);
 }
 
 td {
     border: 2px solid black;
-    background-color: black;
 }
 
 #button-div{
