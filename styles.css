@@ -1,0 +1,15 @@
+body{
+    width: 60%;
+    margin: auto;
+}
+
+table{
+    margin: auto;
+    height: 300px; 
+    width: 300px; 
+    background-color: cadetblue;
+}
+
+td {
+    border: 2px solid black;
+}
