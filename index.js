@@ -9,18 +9,21 @@ let playerMoves = [];
 // if td is pressed change the color
 function clickedBlock(clicked){
     let clickedBlock = clicked.target
-    if (currentPlayer === 'X'){
-        clickedBlock.style.backgroundColor = "white";
-        playerMoves.push(clickedBlock)
-        console.log("X:", playerMoves)
-        currentPlayer = 'O'
+    while(!(clickedBlock.style.backgroundColor)){
+        if (currentPlayer === 'X'){
+            clickedBlock.style.backgroundColor = "white";
+            playerMoves.push(clickedBlock)
+            console.log("X:", playerMoves)
+            currentPlayer = 'O'
+        }
+        else {
+            clickedBlock.style.backgroundColor = "red";
+            playerMoves.push(clickedBlock)
+            console.log("O:", playerMoves)
+            currentPlayer = 'X'
+        }
     }
-    else {
-        clickedBlock.style.backgroundColor = "red";
-        playerMoves.push(clickedBlock)
-        console.log("O:", playerMoves)
-        currentPlayer = 'X'
-    }
+   
 }
 
 
